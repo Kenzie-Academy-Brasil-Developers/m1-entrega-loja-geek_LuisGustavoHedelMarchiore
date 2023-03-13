@@ -37,30 +37,59 @@ let itens = [
     }
 ];
 
-const ul = document.querySelector("ul")
+const body = document.querySelector("body");
 
-const paintingsList = document.querySelector('.list-paintings');
-const figuresList = document.querySelector('.list-figures');
+function createElement(itens){
+    const userCard = document.createElement("div")
+    userCard.id = itens.name;
 
-for (let i = 0; i < itens.length; i++) {
-  const item = itens[i];
-  const li = document.createElement('li');
-  
-  const img = document.createElement('img');
-  img.src = item.image;
-  li.appendChild(img);
-  
-  const h3 = document.createElement('h3');
-  h3.innerText = item.name;
-  li.appendChild(h3);
-  
-  const span = document.createElement('span');
-  span.innerText = item.price;
-  li.appendChild(span);
-  
-  if (item.type === 'Painting') {
-    paintingsList.appendChild(li);
-  } else if (item.type === 'Action Figures') {
-    figuresList.appendChild(li);
-  }
+    userCard.className = "userCard"
+
+    const userImage = document.createElement("img");
+    userImage.src = itens.image;
+    userCard.appendChild(userImage)
+
+    const usernameText = document.createElement("span")
+    usernameText.innerText = itens.name;
+
+    userCard.appendChild(usernameText);
+
+    const followingList = document.createElement("ul");
+
+    const followingIten = document.createElement("p");
+    followingIten.innerText = itens.price;
+    followingList.appendChild(followingIten);
+    
+    userCard.appendChild(followingList);
+
+    return userCard;
 }
+
+function createUsersSection(){
+    const userSection = document.createElement("section");
+    userSection.id = "users"
+
+    for (let i = 0; i < itens.length; i++) {
+        const card = createElement(itens[i])
+        userSection.appendChild(card)
+    }
+
+   /*  const titulo = document.createElement("h1")
+    titulo.innerText = "Action Figures"
+    body.appendChild(titulo)
+ */
+/*     if (itens.type == 'Action Figures') {
+        body.appendChild(userSection);
+    } */
+
+   /*  const titulo2 = document.createElement("h1")
+    titulo2.innerText = "Painting"
+    body.appendChild(titulo2) */
+
+/*     if (itens.type == 'Painting') {
+        body.appendChild(userSection);
+    } */
+    body.appendChild(userSection);
+}
+
+createUsersSection();
