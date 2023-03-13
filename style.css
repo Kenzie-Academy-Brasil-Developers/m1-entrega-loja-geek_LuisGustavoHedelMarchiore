@@ -1,0 +1,107 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+  }
+
+  #logo{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    color: #4C6EF5;
+    font-size: 24px;
+  }
+
+button{
+    margin: 10px;
+    border: none;
+    background-color: #0A99FE;
+    border-radius: 10px;
+    width: 150px;
+    height: 40px;
+}
+
+button:hover{
+    background-color: #0A99FE;
+    opacity: 10%;
+}
+  
+  main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h2 {
+    color: #1B1B1B;
+    font-size: 20px;
+    font-weight: regular;
+    margin-top: 0;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  li {
+    width: 207px;
+    height: 275px;
+
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  li img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  li h3 {
+    font-size: 18px;
+    font-weight: medium;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  
+  li p {
+    font-size: 14px;
+    color: #868383;
+    margin: 0;
+  }
+  
+  footer {
+    background-color: #0A99FE;
+    opacity: 0.9;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 14px;
+  }
+  
+  #divCard{
+    padding-top: 10px;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 207px;
+    height: 275px;
+    border-radius: 10px;
+}
+
+#div_photo{
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+}
