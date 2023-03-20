@@ -1,6 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
+  }
+
+  h1{
+    color: #1B1B1B;
+    size: 20px;
+  }
+
+  h2{
+    color: #1B1B1B;
+    size: 20px;
+  }
+
+  span{
+    color: #868383;
+    size: 16px;
   }
 
   #logo{
@@ -15,14 +32,16 @@ button{
     margin: 10px;
     border: none;
     background-color: #0A99FE;
+    opacity: 0.9;
     border-radius: 10px;
     width: 150px;
     height: 40px;
+    size: 20px;
 }
 
 button:hover{
     background-color: #0A99FE;
-    opacity: 10%;
+    opacity: 1;
 }
   
   main {
@@ -43,8 +62,8 @@ button:hover{
     margin: 0;
     padding: 0;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    overflow-x: auto;
   }
   
   li {
@@ -109,26 +128,27 @@ button:hover{
 #users{
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
     gap: 30px;
     margin: 30px;
+    overflow-x: auto;
 }
 
 .userCard{
-    width: 150px;
+    width: 207px;
+    height: 275px;
     background-color: #eee;
 
     border-radius: 10px;
     padding: 30px;
 
-    display: flex;
+
     flex-direction: column;
     align-items: center;
 }
 
 .userCard img{
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: 50%;
 
     border-radius: 10px;
     margin-bottom: 20px;

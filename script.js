@@ -37,59 +37,31 @@ let itens = [
     }
 ];
 
-const body = document.querySelector("body");
+const paintingTag = document.getElementsByClassName("paintings")[0];
+const actionTag = document.getElementsByClassName("action")[0];
 
-function createElement(itens){
-    const userCard = document.createElement("div")
-    userCard.id = itens.name;
-
-    userCard.className = "userCard"
-
-    const userImage = document.createElement("img");
-    userImage.src = itens.image;
-    userCard.appendChild(userImage)
-
-    const usernameText = document.createElement("span")
-    usernameText.innerText = itens.name;
-
-    userCard.appendChild(usernameText);
-
-    const followingList = document.createElement("ul");
-
-    const followingIten = document.createElement("p");
-    followingIten.innerText = itens.price;
-    followingList.appendChild(followingIten);
-    
-    userCard.appendChild(followingList);
-
-    return userCard;
+for (let i = 0; i < itens.length; i++) {
+    const userCard = document.createElement("li") 
+    userCard.id = itens[i].name; 
+ 
+    userCard.className = "userCard" 
+ 
+    const userImage = document.createElement("img"); 
+    userImage.src = itens[i].image; 
+    userCard.appendChild(userImage) 
+ 
+    const usernameText = document.createElement("h2") 
+    usernameText.innerText = itens[i].name; 
+ 
+    userCard.appendChild(usernameText); 
+ 
+    const followingIten = document.createElement("span"); 
+    followingIten.innerText = itens[i].price; 
+    userCard.appendChild(followingIten); 
+  
+  if (itens[i].type === "Painting") {
+    paintingTag.appendChild(userCard);
+  } else if (itens[i].type === "Action Figures") {
+    actionTag.appendChild(userCard);
+  }
 }
-
-function createUsersSection(){
-    const userSection = document.createElement("section");
-    userSection.id = "users"
-
-    for (let i = 0; i < itens.length; i++) {
-        const card = createElement(itens[i])
-        userSection.appendChild(card)
-    }
-
-   /*  const titulo = document.createElement("h1")
-    titulo.innerText = "Action Figures"
-    body.appendChild(titulo)
- */
-/*     if (itens.type == 'Action Figures') {
-        body.appendChild(userSection);
-    } */
-
-   /*  const titulo2 = document.createElement("h1")
-    titulo2.innerText = "Painting"
-    body.appendChild(titulo2) */
-
-/*     if (itens.type == 'Painting') {
-        body.appendChild(userSection);
-    } */
-    body.appendChild(userSection);
-}
-
-createUsersSection();
